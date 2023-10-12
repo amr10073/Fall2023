@@ -4,6 +4,11 @@
 
 using namespace xll;
 
+double WINAPI xll_bsm_put_value(double r, double S0, double σ, double k, double t) 
+{
+    return fre::bsm::put::value(r, S0, σ, k, t);
+}
+
 AddIn xai_bsm_put_value(
 	Function(XLL_DOUBLE, "xll_bsm_put_value", "BSM.PUT.VALUE")
 	.Arguments({
